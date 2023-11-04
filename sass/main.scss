@@ -11,7 +11,7 @@ body {
 
 header {
   width: 100%;
-  height: 130px;
+  height: 150px;
   padding-top: 10px;
   text-align: center;
   background-image: url(../images/pattern-bg-desktop.png);
@@ -60,6 +60,53 @@ header {
         cursor: pointer;
         background-color: hsl(0, 0%, 51%);
       }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(104, 252, 139);
+
+  .data-container {
+    width: 90%;
+    height: 75px;
+    padding: 0 5%;
+    margin-top: -37.5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    border-radius: 10px;
+
+    .info-containers {
+      width: 25%;
+      height: 65%;
+      border-right: 1px solid hsl(0, 0%, 51%);
+
+      h4 {
+        font-size: 10px;
+        color: hsl(0, 0%, 59%);
+      }
+
+      span {
+        font-size: 15px;
+        color: hsl(0, 0%, 11%);
+      }
+    }
+
+    .info-containers-spacing {
+      padding-left: 2%;
+    }
+
+    :nth-child(4) {
+      border: none;
     }
   }
 }
