@@ -24,8 +24,8 @@
     <header>
       <h1>IP Address Tracker</h1>
       <form>
-        <input type="text" />
-        <button type="submit">
+        <input type="text" id="idInput" value="8.8.8.8" />
+        <button type="submit" id="searchId">
           <img src="./images/icon-arrow.svg" alt="arrow" />
         </button>
       </form>
@@ -34,22 +34,22 @@
       <section class="data-container">
         <div class="info-containers">
           <h4>IP ADDRESS</h4>
-          <span>123123123123</span>
+          <span id="ipHTML"></span>
         </div>
 
         <div class="info-containers info-containers-spacing">
           <h4>LOCATION</h4>
-          <span>Brooklyn, NY 10001</span>
+          <span id="locationHTML"></span>
         </div>
 
         <div class="info-containers info-containers-spacing">
           <h4>TIMEZONE</h4>
-          <span>UTC-5:00</span>
+          <span id="timezoneHTML"></span>
         </div>
 
         <div class="info-containers info-containers-spacing">
           <h4>ISP</h4>
-          <span>SpaceX Starlink</span>
+          <span id="ispHTML"></span>
         </div>
       </section>
 
