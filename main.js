@@ -9,6 +9,17 @@ const ispHTML = document.getElementById("ispHTML");
 var map;
 var marker;
 
+function validateIP() {
+  var input = document.getElementById("idInput");
+  var ipRegex = /^([0-9]{1,3}\.){3}[0-9]{1,3}$/;
+
+  if (ipRegex.test(input.value)) {
+    alert("Valid IP Address!");
+  } else {
+    alert("Please enter a valid IP address.");
+  }
+}
+
 const IpGeolocation = async (ip = "8.8.8.8") => {
   const api = await fetch(
     `https://geo.ipify.org/api/v2/country,city?apiKey=at_Gm32QfjbHBkhFsRk7vgdcaJAwSw0X&ipAddress=${ip}`
@@ -25,11 +36,11 @@ const IpGeolocation = async (ip = "8.8.8.8") => {
   lng = data.location.lng;
 
   if (map === undefined) {
-    map = L.map("map").setView([lat, lng], 1);
+    map = L.map("map").setView([lat, lng], 13);
     marker = L.marker([lat, lng]).addTo(map);
   } else {
     map.remove();
-    map = L.map("map").setView([lat, lng], 1);
+    map = L.map("map").setView([lat, lng], 13);
     marker = L.marker([lat, lng]).addTo(map);
   }
 
